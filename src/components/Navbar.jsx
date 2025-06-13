@@ -7,12 +7,21 @@ function Navbar() {
       : 'text-gray-700 hover:text-blue-500';
 
   return (
-    <nav className="bg-white shadow p-4 border-b flex gap-6">
-      <NavLink to="/" className={linkClass}>Home</NavLink>
-      <NavLink to="/clubs" className={linkClass}>Clubs</NavLink>
-      <NavLink to="/about" className={linkClass}>About</NavLink>
-    </nav>
+    <nav className="bg-blue-600 text-white px-6 py-4 shadow">
+    <ul className="flex gap-6">
+      <NavLink to="/" className={({ isActive }) => isActive ? "font-bold underline" : "hover:underline"}>
+        Home
+      </NavLink>
+      <NavLink to="/clubs" className={({ isActive }) => isActive ? "font-bold underline" : "hover:underline"}>
+        Clubs
+      </NavLink>
+      <NavLink to="/about" className={({ isActive }) => isActive ? "font-bold underline" : "hover:underline"}>
+        About
+      </NavLink>
+    </ul>
+  </nav>
   );
 }
 
 export default Navbar;
+

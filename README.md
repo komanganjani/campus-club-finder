@@ -1,12 +1,82 @@
-# React + Vite
+Campus Club Finder adalah aplikasi web yang memudahkan mahasiswa untuk:
+- Menemukan klub yang tersedia di kampus
+- Melihat detail dan event dari klub
+- Bergabung ke klub pilihan
+- Semua data disimpan secara lokal di browser menggunakan localStorage, tanpa backend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Menu
+1. Home Page (/)
+Fitur:
 
-Currently, two official plugins are available:
+Pesan sambutan
+Menu  "Clubs” untuk navigasi ke /clubs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Screenshot: "campus-club-finder\Screenshot\Home.png"
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+2. Clubs Page (/clubs)
+Fitur:
+
+Menampilkan semua klub 
+
+Toggle tampilan Grid/List
+
+Dropdown untuk sorting A–Z / Z–A
+
+Setiap kartu memiliki tombol "View Details" untuk menuju halaman detail
+
+Komponen Terkait:
+
+ClubCard.jsx
+
+Clubs.jsx
+
+Screenshot: "campus-club-finder\Screenshot\Clubs.png", "campus-club-finder\Screenshot\Sort.png", "campus-club-finder\Screenshot\Sort2.png"
+
+
+3. Club Detail Page (/clubs/:clubId)
+Fitur:
+
+Gambar besar klub
+
+Deskripsi lengkap klub
+
+Daftar event yang akan datang
+
+Tombol “Join Club” → menyimpan status ke localStorage
+
+Jika sudah join, tombol dinonaktifkan & pesan berubah
+
+Komponen Terkait:
+
+ClubDetail.jsx
+
+Screenshot: "campus-club-finder\Screenshot\Details.png"
+Bisa Join club
+Screenshot: "campus-club-finder\Screenshot\TombolResetClub.png"
+
+4. About Page (/about)
+Fitur:
+
+Penjelasan singkat tentang aplikasi
+
+Daftar teknologi yang digunakan: Vite, React, React Router, Tailwind CSS
+
+Screenshot: "campus-club-finder\Screenshot\Details.png" 
+
+Bisa Reset club
+Screenshot: "campus-club-finder\Screenshot\TombolResetClub.png"
+
+
+5. 404 Not Found (*)
+Fitur:
+
+Muncul jika user akses route yang tidak ada
+
+Pesan ramah pengguna dan tombol kembali ke Home
+
+Screenshot: Screenshot: "campus-club-finder\Screenshot\Eror.png"
+
+
+
